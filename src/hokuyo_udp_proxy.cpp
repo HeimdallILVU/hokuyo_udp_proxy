@@ -155,7 +155,7 @@ void run(const char* receive_on_ip, int send_to_port, const char* sim_receive_on
             }
             
             if (fds[1].revents & POLLIN) {
-                if (!sim_mode.load() && std::chrono::duration_cast<std::chrono::seconds>(current_time - last_sim_switch_time).count() > 10) {
+                if (!sim_mode.load() && std::chrono::duration_cast<std::chrono::seconds>(current_time - last_sim_switch_time).count() > 0.5) {
                     std::cout << "Switching to sim mode for " << receive_on_ip << std::endl;
                     sim_mode.store(true);
                 }
