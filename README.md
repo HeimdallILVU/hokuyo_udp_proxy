@@ -82,11 +82,11 @@ The packet format is defined in the `packet_nibbles_spec` map within `hokuyo_udp
 
 ## Running as a Service
 
-To run the `hokuyo_udp_proxy` executable as a systemd service named `hokuyo_sim`, follow these steps:
+To run the `hokuyo_udp_proxy` executable as a systemd service named `hokuyo_eoe`, follow these steps:
 
 1. **Create a Systemd Service File**
 
-   Create a file named `/etc/systemd/system/hokuyo_sim.service` with the following content:
+   Create a file named `/etc/systemd/system/hokuyo_eoe.service` with the following content:
 
    ```ini
    [Unit]
@@ -112,19 +112,19 @@ To run the `hokuyo_udp_proxy` executable as a systemd service named `hokuyo_sim`
 3. **Start the Service**
 
    ```bash
-   sudo systemctl start hokuyo_sim
+   sudo systemctl start hokuyo_eoe
    ```
 
 4. **Enable the Service to Start on Boot**
 
    ```bash
-   sudo systemctl enable hokuyo_sim
+   sudo systemctl enable hokuyo_eoe
    ```
 
 5. **Check the Status of the Service**
 
    ```bash
-   sudo systemctl status hokuyo_sim
+   sudo systemctl status hokuyo_eoe
    ```
 
 This service configuration will ensure that your executable runs automatically and restarts if it crashes. Adjust the `ExecStart` path if you installed the executable in a different location.
