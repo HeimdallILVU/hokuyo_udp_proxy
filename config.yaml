@@ -1,0 +1,10 @@
+scanners:
+  - receive_on_ip: "10.0.2.1"
+    send_to_port: 5005
+    sim_receive_on_ip: "192.168.179.158"
+    sim_hokuyo_target_port: 10940
+  - receive_on_ip: "10.0.3.1"
+    send_to_port: 5006
+    sim_receive_on_ip: "192.168.179.158"
+    sim_hokuyo_target_port: 10941
+  # Add more scanner configurations as needed
